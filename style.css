@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'chinese_dragonregular';
+    src: url('src/dragonFont1/chinesedragon-webfont.woff2') format('woff2'),
+         url('src/dragonFont1/chinesedragon-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montheavy_demo';
+    src: url('src/montFont1/mont-heavydemo-webfont.woff2') format('woff2'),
+         url('src/montFont1/mont-heavydemo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    margin: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    gap: 20vw;
+    background-image: url(src/hongkong.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    margin-top: 5vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 2rem;
+    gap: 3%;
+    align-items: center;
+    font-family: 'chinese_dragonregular', 'Times New Roman', Times, serif;
+}
+
+.logo img {
+    width: 40%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.signUp {
+    box-sizing: border-box;
+    min-width: 432px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2%;
+    margin-top: 15vh;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+}
+
+.signUp-demo {
+    text-align: center;
+    padding: 3%;
+    font-size: 2rem;
+    font-family: 'chinese_dragonregular', 'Times New Roman', Times, serif;
+    transition: 0.5s;
+}
+
+.signUp-demo:hover {
+    text-shadow: 2px 2px 2px rgba(74, 95, 140);
+    transform: translateY(-5px);
+}
+
+.signUp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'montheavy_demo', 'Times New Roman', Times, serif;
+    color: #2A2F33;
+}
+
+.name,
+.contact,
+.password {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.signUp-label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    box-sizing: border-box;
+    width: 200px;
+    border-radius: 8px;
+    padding: 3%;
+    font-family: 'montheavy_demo', 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: #2A2F33;
+}
+
+.submit-button {
+    align-self: center;
+    border: none;
+    background-color: transparent;
+    margin-top: 2%;
+    font-family: 'chinese_dragonregular', 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    transition: 0.5s;
+}
+
+.submit-button:hover {
+    text-shadow: 2px 2px 2px rgba(74, 95, 140);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.error {
+    height: 1em;
+    color: #2A2F33;
+    margin-top: 5px;
+    font-size: 0.875em;
+    width: 200px;
+}
+
+
+@media screen and (max-width: 780px){
+    body {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .signUp {
+        margin: 0;
+    }
+    
+    .logo {
+        width: 80vw;
+        margin: auto;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .name,
+    .contact,
+    .password {
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signUp {
+        min-width: 200px;
+        width: 80vw;
+        margin: auto;
+    }
+
+    .signUp-form {
+        gap: 0;
+    }
+}
